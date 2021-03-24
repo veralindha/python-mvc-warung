@@ -1,25 +1,33 @@
 #mahasiswa
-class WarungModel(object):
-    def __init__(self, minuman, makanan, meja):
-        self.minuman = minuman
-        self.makanan = makanan
-        self.meja = meja
-    def getminuman(self):
-        return self.minuman
-    def setminuman(self, minuman):
-        self.minuman = minuman
-    def getmakanan(self):
-        return self.makanan
-    def setmakanan(self, makanan):
-        self.makanan = makanan
-    def getmeja(self):
-        return self.meja
-    def setmeja(self, meja):
-        self.meja = meja
-    def getAll(self):
+class ShopModel(object):
+    def __init__(self, drink, food, table):
+        self.drink = drink
+        self.food = food
+        self.table = table
+
+    def get_drink(self):
+        return self.drink
+
+    def set_drink(self, drink):
+        self.drink = drink
+
+    def get_food(self):
+        return self.food
+
+    def set_food(self, food):
+        self.food = food
+
+    def get_table(self):
+        return self.table
+
+    def set_table(self, table):
+        self.table = table
+
+    def get_all(self):
         data = {
-            'minuman' : 'Es teh',
-            'makanan' : 'Nasi goreng',
-            'meja' : '4'
+            'drink' : 'Es teh',
+            'food' : 'Nasi goreng',
+            'table' : '4'
         }
+
         return data

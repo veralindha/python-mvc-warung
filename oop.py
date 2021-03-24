@@ -1,4 +1,4 @@
-from controller import WarungController
+from controller import ShopController
 
-a = WarungController()
-a.run()
+take_controller = ShopController()
+take_controller.run()

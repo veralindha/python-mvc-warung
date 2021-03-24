@@ -1,20 +1,24 @@
 class MenuView(object):
-    def formMenu(self):
-        minuman = input('input minuman :')
-        makanan = input('input makanan :')
-        meja = int(input('input alamat :'))
+    def form_menu(self):
+        drink = input('input drink :')
+        food = input('input food :')
+        table = int(input('input alamat :'))
 
         data = {
-            'minuman' : minuman,
-            'makanan' : makanan,
-            'meja' : meja
+            'drink' : drink,
+            'food' : food,
+            'table' : table
         }
+
         return data
-    def pilihPengaturan(self):
+
+    def pilih_pengaturan(self):
         print("[1]. view : \n [2]. exit")
         option = (input('Pilih :'))
+
         return option
-    def tampilMenu(self, data):
-        print('minuman' + ":" + str(data['minuman']))
-        print('makanan' + ":" + data['makanan'])
-        print('meja' + ":" + data['meja'])
+
+    def show_menu(self, data):
+        print('drink' + ":" + str(data['drink']))
+        print('food' + ":" + data['food'])
+        print('table' + ":" + data['table'])

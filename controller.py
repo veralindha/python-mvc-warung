@@ -1,39 +1,39 @@
-from model import WarungModel
+from model import ShopModel
 from view import MenuView
 
-
-class WarungController(object):
-    def createPesanan(self):
+# Create a class shop controller
+class ShopController(object):
+    def create_order(self):
         view = MenuView()
-        data = view.formMenu()
+        data = view.form_menu()
 
         return data
 
-    def tampil(self, data):
+    def show(self, data):
         view = MenuView()
-        option = view.pilihPengaturan()
+        option = view.pilih_pengaturan()
 
-        if option == '1':
-            self.viewMenu(data)
-        elif option == '2':
+        if option=='1':
+            self.view_menu(data)
+        elif option=='2':
             print('stop')
         else:
             print('404 error')
-            self.tampil(data)
+            self.show(data)
 
-    def viewMenu(self, data):
+    def view_menu(self, data):
         view = MenuView()
-        view.tampilMenu(data)
+        view.show_menu(data)
 
-        self.tampil(data)
+        self.show(data)
 
     def run(self):
-        register = self.createPesanan()
-        minuman = register['minuman']
-        makanan = register['makanan']
-        meja = register['meja']
+        register = self.create_order()
+        drink = register['drink']
+        food = register['food']
+        table = register['table']
 
-        data = WarungModel(minuman, makanan, meja)
+        data = ShopModel(drink, food, table)
 
-        datamenu = data.getAll()
-        self.tampil(datamenu)
+        data_menu = data.get_all()
+        self.show(data_menu)
